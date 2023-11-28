@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfApp1.AutokForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="AutokForm" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+
+        <Label Content="Azonosító:" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+        <Label Grid.Row="1" Content="Elérhető-e:" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+        <Label Grid.Row="2" Content="Autó Márkája:" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+
+        <TextBox x:Name="azonInput" Grid.Column="1" VerticalAlignment="Center" />
+        <CheckBox x:Name="elerhetoInput" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" />
+        <TextBox x:Name="markaInput" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" />
+
+        <Button x:Name="addButton" Grid.Column="1" Grid.Row="3" Content="Hozzáad" VerticalAlignment="Top" Margin="0,15,0,0" Click="Add_Click" />
+        <Button x:Name="updateButton" Visibility="Collapsed" Grid.Column="1" Grid.Row="3" Content="Módosít" VerticalAlignment="Top" Margin="0,15,0,0" Click="Update_Click" />
+
+    </Grid>
+</Window>
